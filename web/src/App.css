@@ -1,0 +1,289 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fafafa;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ff0000;
+}
+
+/* Home Section Styles */
+.home-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://iili.io/2plIkX4.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding: 20px;
+} 
+
+@media screen and (max-width: 768px) {
+  .home-section {
+    background: url('https://iili.io/2plIkX4.jpg') no-repeat center center/cover;
+    padding: 10px;
+    
+    
+  }
+}
+.home-content {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-content {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+  }
+} 
+
+/* Characters Section Styles */
+.characters-section {
+  padding: 60px 20px;
+  background: #2c2c2c;
+}
+
+.characters-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.character-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.character-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.character-card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.character-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.character-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Timeline Section Styles */
+.timeline-section {
+  padding: 60px 20px;
+  background: #1c1c1c;
+}
+
+.timeline-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ff0000;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-event {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.timeline-event:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-event:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-event-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-event-content h3 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
+
+.timeline-event-content p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.timeline-event.active .timeline-event-content {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.event-details {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .character-card {
+    width: 150px;
+  }
+
+  .timeline-event {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding: 20px 0;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-event-content {
+    margin-left: 40px;
+  }
+}
